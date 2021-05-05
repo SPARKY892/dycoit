@@ -6,16 +6,17 @@
     padding-top: 10px;
     padding-left: 10%;
     padding-right: 10%;
+    overflow-x: hidden;
 }
 
 .nav-container {
-    background-color: yellow;
     position: absolute;
     top: 0;
     left: 100%;
     width: 70%;
     height: 100%;
     transition: all 0.5s ease;
+    overflow-x: hidden;
 }
 
 .nav-item-container {
@@ -36,6 +37,7 @@
 }
 
 .nav-container.active {
+    display: auto;
     left: 30%;
     transition: all 0.5s ease;
 }
@@ -55,5 +57,26 @@
 @media screen and (min-width: 960px) {
   .nav-menu-icon {
     display: none;
+  }
+  
+  .nav-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    left: auto;
+  }
+
+  .nav-container.active {
+    left: auto;
+  }
+  
+  .nav-item-container {
+    display: flex;
+    margin-top: 0;
+  }
+  
+  .nav-item {
+    margin-top: 0;
+    padding: 0 20px;
   }
 } 
